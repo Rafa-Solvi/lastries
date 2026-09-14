@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+coverage/
+*.log
+.env*
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Datos sintéticos de rendimiento (regenerables con scripts/gen-five-years.ts)
+tests/fixtures/five-years.json

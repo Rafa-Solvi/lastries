@@ -1,0 +1,30 @@
+{
+  "name": "lastries",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Registro personal de entrenamiento de fuerza y alimentación (PWA local)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/gen-sw-manifest.ts",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "catalog": "node scripts/build-catalog.ts"
+  },
+  "dependencies": {
+    "fflate": "0.8.3",
+    "idb": "8.0.3",
+    "preact": "10.29.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "sharp": "0.35.4",
+    "typescript": "5.9.3",
+    "vite": "8.3.0",
+    "vitest": "5.0.0"
+  }
+}

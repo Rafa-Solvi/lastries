@@ -1,0 +1,141 @@
+{
+  "format": "lastries",
+  "schemaVersion": 1,
+  "exportedAt": "2026-09-14T21:05:00",
+  "appVersion": "1.0.0",
+  "catalogVersion": "fixture",
+  "data": {
+    "muscleGroups": [
+      { "id": "00000000-0000-4000-8000-000000000001", "name": "Pecho", "baseKey": "chest" },
+      { "id": "00000000-0000-4000-8000-000000000002", "name": "Tríceps", "baseKey": "triceps" },
+      { "id": "00000000-0000-4000-8000-000000000003", "name": "Hombros", "baseKey": "shoulders" }
+    ],
+    "exercises": [
+      {
+        "id": "00000000-0000-4000-8000-000000000020",
+        "source": "base",
+        "baseId": "Barbell_Bench_Press_-_Medium_Grip",
+        "originalName": "Barbell Bench Press - Medium Grip",
+        "name": "Press banca",
+        "primaryMuscleIds": ["00000000-0000-4000-8000-000000000001"],
+        "secondaryMuscleIds": ["00000000-0000-4000-8000-000000000002", "00000000-0000-4000-8000-000000000003"],
+        "equipment": "Barra",
+        "demos": [
+          { "kind": "bundled", "path": "Barbell_Bench_Press_-_Medium_Grip/0.webp" },
+          { "kind": "media", "mediaId": "00000000-0000-4000-8000-000000000010" }
+        ],
+        "archived": false
+      }
+    ],
+    "media": [
+      {
+        "id": "00000000-0000-4000-8000-000000000010",
+        "mimeType": "image/gif",
+        "fileName": "00000000-0000-4000-8000-000000000010.gif",
+        "byteSize": 1024
+      }
+    ],
+    "routines": [
+      {
+        "id": "00000000-0000-4000-8000-000000000030",
+        "name": "Torso A",
+        "items": [
+          { "exerciseId": "00000000-0000-4000-8000-000000000020", "targetSets": 3, "repsMin": 6, "repsMax": 8, "targetRir": 2 }
+        ]
+      }
+    ],
+    "sessions": [
+      {
+        "id": "00000000-0000-4000-8000-000000000040",
+        "routineId": "00000000-0000-4000-8000-000000000030",
+        "routineName": "Torso A",
+        "date": "2026-09-14",
+        "startedAt": "2026-09-14T18:00:00",
+        "endedAt": null,
+        "exercises": [
+          {
+            "exerciseId": "00000000-0000-4000-8000-000000000020",
+            "target": { "targetSets": 3, "repsMin": 6, "repsMax": 8, "targetRir": 2 },
+            "sets": [
+              { "weightKg": 20, "reps": 10, "rir": 5, "failure": false, "warmup": true, "confirmedAt": "2026-09-14T18:05:00" },
+              { "weightKg": 82.5, "reps": 8, "rir": 0, "failure": true, "warmup": false, "confirmedAt": "2026-09-14T18:15:00" }
+            ],
+            "draft": { "weightKg": 82.5, "reps": null, "rir": 1, "failure": false, "warmup": false, "updatedAt": "2026-09-14T18:17:00" }
+          }
+        ]
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "00000000-0000-4000-8000-000000000050",
+        "name": "Arroz blanco",
+        "baseUnit": "g",
+        "per100": { "kcal": 350, "protein": 7, "carbs": 77, "fat": 0.6 },
+        "section": "Despensa",
+        "purchaseFormat": { "name": "paquete", "amount": 1000 },
+        "householdMeasures": [{ "name": "vaso", "amount": 180 }],
+        "archived": false
+      }
+    ],
+    "recipes": [
+      {
+        "id": "00000000-0000-4000-8000-000000000060",
+        "name": "Arroz hervido",
+        "baseServings": 2,
+        "lines": [{ "ingredientId": "00000000-0000-4000-8000-000000000050", "amount": 160 }],
+        "steps": ["Hervir agua", "Cocer 18 minutos"],
+        "archived": false
+      }
+    ],
+    "mealMoments": [
+      { "id": "00000000-0000-4000-8000-000000000070", "name": "Comida", "startTime": "13:00" }
+    ],
+    "plannedItems": [
+      {
+        "id": "00000000-0000-4000-8000-000000000080",
+        "date": "2026-09-14",
+        "momentId": "00000000-0000-4000-8000-000000000070",
+        "ref": { "type": "recipe", "recipeId": "00000000-0000-4000-8000-000000000060", "servings": 1 }
+      }
+    ],
+    "consumptions": [
+      {
+        "id": "00000000-0000-4000-8000-000000000090",
+        "date": "2026-09-14",
+        "momentId": "00000000-0000-4000-8000-000000000070",
+        "ref": { "type": "recipe", "recipeId": "00000000-0000-4000-8000-000000000060", "servings": 1 },
+        "nutritionPerUnit": { "kcal": 280, "protein": 5.6, "carbs": 61.6, "fat": 0.48 },
+        "plannedItemId": "00000000-0000-4000-8000-000000000080",
+        "createdAt": "2026-09-14T14:10:00"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000091",
+        "date": "2026-09-13",
+        "momentId": "00000000-0000-4000-8000-000000000070",
+        "ref": { "type": "ingredient", "ingredientId": "00000000-0000-4000-8000-000000000050", "amount": 80 },
+        "nutritionPerUnit": { "kcal": 350, "protein": 7, "carbs": 77, "fat": 0.6 },
+        "plannedItemId": null,
+        "createdAt": "2026-09-13T14:00:00"
+      }
+    ],
+    "goals": [
+      { "id": "00000000-0000-4000-8000-0000000000a0", "effectiveFrom": "2026-09-01", "kcal": 2500, "protein": 160, "carbs": null, "fat": null }
+    ],
+    "shoppingList": {
+      "id": "current",
+      "from": "2026-09-14",
+      "to": "2026-09-20",
+      "generatedLines": [
+        { "ingredientId": "00000000-0000-4000-8000-000000000050", "requiredAmount": 160, "packs": 1, "purchased": true }
+      ],
+      "manualLines": [
+        { "id": "00000000-0000-4000-8000-0000000000d0", "text": "Papel de cocina", "quantity": null, "purchased": false }
+      ]
+    },
+    "bodyWeights": [{ "date": "2026-09-14", "kg": 80.1 }],
+    "measurementTypes": [{ "id": "00000000-0000-4000-8000-0000000000b0", "name": "Cintura", "order": 0 }],
+    "bodyMeasurements": [
+      { "id": "00000000-0000-4000-8000-0000000000c0", "typeId": "00000000-0000-4000-8000-0000000000b0", "date": "2026-09-14", "cm": 84.5 }
+    ]
+  }
+}
