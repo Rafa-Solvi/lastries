@@ -5,6 +5,13 @@ todos los datos se guardan en el dispositivo y se pueden exportar e importar en 
 
 App: https://rafa-solvi.github.io/lastries/
 
+## Configuración inicial
+
+Para dejar la app preparada (ejercicios, rutinas, ingredientes, recetas, momentos del día, objetivos y
+tipos de medida) sin darlo todo de alta a mano: **Ajustes → Configuración inicial → Descargar
+plantilla**, edítala e impórtala con **Importar configuración…**. Formato completo en
+[contracts/setup-import.md](specs/001-gym-nutrition-tracker/contracts/setup-import.md).
+
 ## Desarrollo
 
 Requiere Node 22.18 o posterior.

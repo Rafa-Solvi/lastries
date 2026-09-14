@@ -63,6 +63,10 @@
   con los valores vigentes hoy, igual que cualquier registro.
 - Q: ¿Se puede deshacer un registro rápido? → A: Sí, con un aviso no modal tras cada registro
   rápido (FR-009).
+- Q: ¿Cómo se deja la app preparada sin darlo todo de alta a mano? → A: Con un JSON de configuración
+  escrito por el usuario (formato `lastries-configuracion`) que referencia todo por nombre y crea o
+  actualiza ejercicios, rutinas, ingredientes, recetas, momentos del día, objetivos y tipos de medida,
+  sin borrar registros (FR-063, contracts/setup-import.md).
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -555,6 +559,18 @@ cálculo manual; registrar medidas y ver su evolución.
   definida como la media de los pesajes existentes en los 7 días que terminan en ese día.
 - **FR-062**: El usuario MUST poder registrar medidas corporales con fecha, de una lista de tipos de
   medida editable por el usuario, y consultar la evolución de cada tipo.
+
+**Configuración inicial**
+
+- **FR-063**: El usuario MUST poder importar un fichero JSON de configuración escrito a mano, con el
+  formato de contracts/setup-import.md, que crea o actualiza por nombre (sin distinguir mayúsculas ni
+  tildes) grupos musculares, ejercicios (incluido renombrar ejercicios del catálogo base), rutinas,
+  ingredientes con medidas caseras y formato de compra, recetas, momentos del día, objetivos y tipos de
+  medida. La importación MUST validar todo el fichero y, si hay errores, MUST NOT aplicar nada y MUST
+  listar cada error con su ruta; si es válido, MUST mostrar un resumen de nuevos y actualizados antes de
+  aplicar en una única transacción. MUST NOT borrar sesiones, consumos, pesajes ni medidas, y reimportar
+  el mismo fichero MUST NOT crear duplicados. La app MUST ofrecer la descarga de una plantilla de
+  ejemplo.
 
 ### Key Entities *(include if feature involves data)*
 

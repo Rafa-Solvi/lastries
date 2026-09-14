@@ -302,6 +302,21 @@ media 80,1; registrar cintura en varias fechas y ver su evolución (quickstart �
 
 ---
 
+## Phase 11: Configuración inicial en JSON (FR-063, añadido 2026-09-14)
+
+**Goal**: dejar la app preparada importando un JSON escrito a mano, sin UUIDs, que crea o actualiza por nombre.
+
+**Independent Test**: descargar la plantilla, importarla sobre una app recién instalada, comprobar rutinas, ejercicios renombrados del catálogo, recetas con medidas caseras, momentos y objetivos; reimportar sin duplicados; importar un fichero con errores sin aplicar nada.
+
+- [X] T094 Documentar el formato `lastries-configuracion` con reglas de fusión, campos, validación y ejemplo completo en specs/001-gym-nutrition-tracker/contracts/setup-import.md
+- [X] T095 [P] Escribir tests de `planSetup`: plantilla sobre estado sembrado, idempotencia al reimportar, formato/versión/claves desconocidas, nombres sin tildes ni mayúsculas, grupo desconocido, catálogo inexistente, ejercicio nuevo sin primarios, rutina con nombre en inglés del catálogo, referencias y rangos inválidos, nombres repetidos, actualización parcial de ingrediente, momentos usados conservados, objetivos por defecto y redondeos en tests/domain/setupImport.test.ts
+- [X] T096 Implementar `planSetup(input, current, today, newId)` puro que valida, resuelve nombres, calcula colecciones resultantes, escrituras, momentos a eliminar, resumen y avisos, y comprueba la integridad final con `validateDocument` en src/domain/setupImport.ts
+- [X] T097 [P] Crear la plantilla de ejemplo con ejercicios del catálogo reales en src/domain/setupTemplate.ts
+- [X] T098 Implementar `prepareSetup`, `commitSetup` (una transacción sobre las 8 colecciones afectadas) y `downloadSetupTemplate` en src/data/setupImport.ts
+- [X] T099 Añadir a Ajustes la sección "Configuración inicial" con descarga de plantilla, importación, lista de errores, resumen de nuevos/actualizados, avisos y botones Aplicar/Cancelar en src/ui/screens/SetupSettings.tsx y src/ui/screens/Settings.tsx
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies

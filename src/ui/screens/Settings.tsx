@@ -6,6 +6,7 @@ import { datePart, formatLong, timePart } from "../../domain/dates.ts";
 import { TopBar } from "../components/TopBar.tsx";
 import { DataSettings } from "./DataSettings.tsx";
 import { GoalsEditor, MealMomentsEditor } from "./FoodSettings.tsx";
+import { SetupSettings } from "./SetupSettings.tsx";
 
 function AppStatus() {
   const meta = useAppState((s) => s.meta);
@@ -48,6 +49,7 @@ export function Settings() {
   return (
     <div>
       <TopBar title="Ajustes" />
+      <SetupSettings />
       <GoalsEditor />
       <MealMomentsEditor />
       <DataSettings />
